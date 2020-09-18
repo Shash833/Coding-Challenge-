@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from "./Components/Header"
 import Container from "./Components/Container"
+import Row from "./Components/Row"
 import Grid from './Components/Grid'
 import './App.css';
 
@@ -10,7 +11,14 @@ function App() {
   return (<div>
     <Header />
     <Container>
-      <Grid droneData={droneData}></Grid>
+      <Row>
+        <h2>Drone Instructions</h2>
+        <p> Click on the buttons below to send instructions with directions to move to find billboards to photograph. Options include 1km movement north, south, east or west or to take a photograph of a billboard. When drone instructions are finalised and sent to the drone, a grid with billboards photographed at least once will be displayed below. </p>
+      </Row>
+      <hr />
+      <Row>
+        {droneData.length ? <Grid droneData={droneData}></Grid> : null}
+      </Row>
     </Container>
 
   </div>
