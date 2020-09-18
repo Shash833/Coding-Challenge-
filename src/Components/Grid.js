@@ -10,12 +10,13 @@ height: 40px;
 width: 40px;
 text-align: center;
 `
-const grid = []
+let grid = []
 
 function Cells({ droneData }) {
     function findCoordinates(droneData) {
         //Empty array to store photographed coordinates
         let coordinates = []
+        grid = []
 
         //Starting coordinates for drone locations; [x,y]
         let xSpot = 0

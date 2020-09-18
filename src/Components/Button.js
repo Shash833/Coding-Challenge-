@@ -6,10 +6,10 @@ const StyledButton = styled(Button)`
 margin: 20px;
 `;
 
-function Buttons({ children }) {
+function Buttons({ onClick, children }) {
     return (
         <>
-            <StyledButton>
+            <StyledButton onClick={onClick}>
                 {children}
             </StyledButton>
         </>

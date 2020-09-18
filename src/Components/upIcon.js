@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components'
 import { ArrowUp } from 'react-bootstrap-icons';
 
+const StyledIcon = styled(ArrowUp)`
+margin: 5px;
+`;
+
+
 function Up() {
-    return <ArrowUp />;
+    return <StyledIcon />;
 }
 
 export default Up
