@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import Header from "./Components/Header"
 import Container from "./Components/Container"
+import Col from './Components/Column'
 import Row from "./Components/Row"
 import Grid from './Components/Grid'
+import Button from './Components/Button'
+import Right from './Components/rightIcon'
+import Down from './Components/downIcon'
+import Up from './Components/upIcon'
+import Left from './Components/leftIcon'
+import Camera from './Components/cameraIcon'
 import './App.css';
 
 function App() {
@@ -12,8 +19,19 @@ function App() {
     <Header />
     <Container>
       <Row>
-        <h2>Drone Instructions</h2>
-        <p> Click on the buttons below to send instructions with directions to move to find billboards to photograph. Options include 1km movement north, south, east or west or to take a photograph of a billboard. When drone instructions are finalised and sent to the drone, a grid with billboards photographed at least once will be displayed below. </p>
+        <Col size={{ span: 12 }}>
+          <h2>Drone Instructions</h2>
+          <p> Click on the buttons below to send instructions with directions to move to find billboards to photograph. Options include 1km movement north, south, east or west or to take a photograph of a billboard. When drone instructions are finalised and sent to the drone, a grid with billboards photographed at least once will be displayed below. </p>
+        </Col>
+      </Row>
+      <Row className={"justify-content-md-center"}>
+        <Col size={{ span: 5 }}>
+          <Button> <Right /></Button>
+          <Button><Down /></Button>
+          <Button><Up /></Button>
+          <Button><Left /></Button>
+          <Button><Camera /></Button>
+        </Col>
       </Row>
       <hr />
       <Row>
@@ -21,7 +39,7 @@ function App() {
       </Row>
     </Container>
 
-  </div>
+  </div >
   );
 }
 export default App;

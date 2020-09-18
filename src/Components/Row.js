@@ -1,10 +1,10 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
 
-function Rows({ children }) {
+function Rows({ children, className }) {
     return (
         <>
-            <Row>{children}</Row>
+            <Row className={className}>{children}</Row>
         </>
     )
 }
